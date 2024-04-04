@@ -24,8 +24,8 @@ app.get('/', (req, res) => {
 app.get('/api/v1/euskoregite/:id', (req, res) => {
     // req.params recoge los datos de la url
     let id = req.params.id;
-
-    res.send({evaluationId: id, message:`Evaluación Euskoregite de: ${id}`});
+    const date = new Date();
+    res.send({date: date, evaluationId: id, message:`Evaluación Euskoregite de: ${id}`});
 });
 
 // app.post('/addname', (req, res) => {
